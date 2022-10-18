@@ -6,8 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Usuario/Documents/Interfaces/Eclipse/comparadorEquipos.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Usuario/Documents/Portatil Medac/Interfaces/Eclipse/comparadorEquipos.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Usuario/Documents/Portatil Medac/2DAM-Medac-Archivos/Interfaces/Eclipse/comparadorEquipos.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
