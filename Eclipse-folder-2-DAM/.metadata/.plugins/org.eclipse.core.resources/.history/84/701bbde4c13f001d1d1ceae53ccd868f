@@ -1,0 +1,21 @@
+package tema1;
+
+public class main1 {
+
+	public static void main(String[] args) {
+		
+		public String nombre;
+		public String edad;
+		public String sexo;
+		public String peso;
+		public String altura;
+		public String nombre;
+		
+		
+		
+		
+		persona1 Persona1 = new persona1();
+		
+	}
+
+}

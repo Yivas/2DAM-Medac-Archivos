@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cds>
+    <cd>
+        <titulo>Still got the blues</titulo>
+        <artista>Gary Moore</artista>
+        <pais>UK</pais>
+        <compania>Virgin records</compania>
+        <precio>10.20</precio>
+        <año>1990</año>
+    </cd>
+
+    <cd>
+        <titulo>One night only</titulo>
+        <artista>Bee Gees</artista>
+        <pais>UK</pais>
+        <compania>Polydor</compania>
+        <precio>10.90</precio>
+        <año>1998</año>
+    </cd>
+    
+
+</cds>

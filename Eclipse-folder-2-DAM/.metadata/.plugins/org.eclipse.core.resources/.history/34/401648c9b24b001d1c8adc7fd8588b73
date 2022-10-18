@@ -1,0 +1,29 @@
+package equipo;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class Equipo implements Serializable {
+
+    String nombre;
+    List<Jugador> roster;
+    
+    
+    // Get y Set
+    
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public List<Jugador> getRoster() {
+		return roster;
+	}
+	public void setRoster(List<Jugador> roster) {
+		this.roster = roster;
+	}
+
+
+
+}

@@ -1,0 +1,13 @@
+package tema2.ficheros_1;
+
+public class Ejercicio9 {
+
+    public static void main(String[] args) {
+        // Escribir un programa que liste el contenido de un directorio pasado como argumento,
+        // de cada elemento debe mostrar: tipo (fichero o directorio)., nombre y si es fichero el
+        // tamaño.
+
+
+    }
+
+}

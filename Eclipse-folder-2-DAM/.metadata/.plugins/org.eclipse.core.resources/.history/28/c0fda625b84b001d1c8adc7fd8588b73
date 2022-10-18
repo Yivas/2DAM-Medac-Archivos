@@ -1,0 +1,19 @@
+package baseballVS;
+
+import equipo.Jugador;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Haciendo uso de las clases creadas, se creará una lista de jugadores on la clase Jugador,
+		// a partir de la cual se calculará
+		// la puntuación media del equipo.
+		// Se tiene que imprimir por consola el valor de la puntuación media.
+		
+		// Creación de los jugadores
+		
+		
+
+	}
+
+}

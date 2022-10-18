@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tarjeta_sanitaria [
+    <!ELEMENT tarjeta_sanitaria (numero_historia, dni, nombre, apellidos)>
+    <!ELEMENT numero_historia (#PCDATA)>
+    <!ELEMENT dni (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ENTITY cabezera "TARJETA SANITARIA INDIVIDUAL">
+    <!ENTITY pie "JUNTA DE ANDALUCIA">
+]>
+
+<tarjeta_sanitaria>
+    <numero_historia>41 0000000000</numero_historia>
+    <dni>99999999-H</dni>
+    <nombre>CARMEN</nombre>
+    <apellidos>ANDALUZA ANDALUZA</apellidos>
+</tarjeta_sanitaria>

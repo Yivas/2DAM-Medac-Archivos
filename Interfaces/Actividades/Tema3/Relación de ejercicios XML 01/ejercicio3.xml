@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vegetales>
+    <vegetal>
+        <nombre>hinojo</nombre>
+        <calorias>28</calorias>
+        <hc>5.1</hc>
+        <proteinas>2.8</proteinas>
+        <grasas>0.4</grasas>
+    </vegetal>
+
+</vegetales>

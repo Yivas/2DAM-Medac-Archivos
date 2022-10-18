@@ -1,0 +1,21 @@
+package tema2.ficheros_1;
+
+public class Ejercicio8 {
+
+    public static void main(String[] args) {
+        // Realiza un programa en C que cree una estructura de directorios como la siguiente,
+        // donde fx son ficheros y dx son directorios,
+        // /home/
+        // /usr1
+        // f1
+        // /usr2
+        // /d1
+        // f2
+        // /d2
+        // f3
+        // f4
+         /d3
+
+    }
+
+}

@@ -1,0 +1,10 @@
+package equipo;
+
+public class Equipo {
+
+    String nombre;
+    List<Jugador> roster;
+
+
+
+}

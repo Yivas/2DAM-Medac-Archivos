@@ -1,0 +1,24 @@
+package ProductosApple;
+public class Mac {
+
+	public static void main(String[] args) {
+		// Producto Mac
+		String nombre = "MacBook Pro";
+		double precio = 1299.99;
+		int stock = 5;
+		String procesador = "i5";
+		int ram = 8;
+		int almacenamiento = 256;
+		String color = "Gris";
+
+		// Constructores
+
+		public Mac() {
+
+		}
+
+
+
+	}
+
+}

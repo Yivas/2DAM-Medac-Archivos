@@ -1,0 +1,8 @@
+<!ELEMENT tarjeta (apellidos, nombres, fecha_nacimiento, identificacion_personal, identificacion_institucion, identificacion_tarjeta, fecha_expiracion)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT nombres (#PCDATA)>
+<!ELEMENT fecha_nacimiento (#PCDATA)>
+<!ELEMENT identificacion_personal (#PCDATA)>
+<!ELEMENT identificacion_institucion (#PCDATA)>
+<!ELEMENT identificacion_tarjeta (#PCDATA)>
+<!ELEMENT fecha_expiracion (#PCDATA)>

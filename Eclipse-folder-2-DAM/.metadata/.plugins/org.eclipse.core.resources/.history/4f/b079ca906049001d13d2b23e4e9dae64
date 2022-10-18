@@ -1,0 +1,36 @@
+package tema2.ficheros_1;
+
+public class Ejercicio11 {
+
+    public static void main(String[] args) {
+        // Crear un programa en Java que borre la estructura anterior, solicitando
+        // confirmación antes de borrar cada fichero o directorio y sin borrar ningún directorio
+        // que no esté vacío. 
+
+        // Ejecutamos el método BorrarArchivos
+
+
+
+
+
+
+    }
+
+    public static void BorrarArchivos(String ruta) {
+        // Borramos todos los archivos de un directorio, mostando nombre y tipo
+        File directorio = new File(ruta);
+        File[] archivos = directorio.listFiles();
+        for (File archivo : archivos) {
+            if (archivo.isDirectory()) {
+                System.out.println("Nombre: " + archivo.getName());
+                System.out.println("Tipo: " + (archivo.isFile()));
+                BorrarArchivos(archivo.getPath());
+            } else {
+                System.out.println("Nombre: " + archivo.getName());
+                System.out.println("Tipo: " + (archivo.isFile()));
+            }
+        }
+
+    }
+
+}

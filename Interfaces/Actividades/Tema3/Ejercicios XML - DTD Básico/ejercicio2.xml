@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tarjeta [
+    <!ELEMENT tarjeta (apellidos, nombres, fecha_nacimiento, identificacion_personal, identificacion_institucion, identificacion_tarjeta, fecha_expiracion)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT nombres (#PCDATA)>
+    <!ELEMENT fecha_nacimiento (#PCDATA)>
+    <!ELEMENT identificacion_personal (#PCDATA)>
+    <!ELEMENT identificacion_institucion (#PCDATA)>
+    <!ELEMENT identificacion_tarjeta (#PCDATA)>
+    <!ELEMENT fecha_expiracion (#PCDATA)>
+]>
+<tarjeta>
+    <apellidos>ESPAÑOL ESPAÑOL</apellidos>
+    <nombres>JUAN</nombres>
+    <fecha_nacimiento>06/12/1978</fecha_nacimiento>
+    <identificacion_personal>280000000293</identificacion_personal>
+    <identificacion_institucion>2800 - INSS MADRID</identificacion_institucion>
+    <identificacion_tarjeta>80724028000420000098</identificacion_tarjeta>
+    <fecha_expiracion>09/01/2005</fecha_expiracion>
+</tarjeta>

@@ -1,0 +1,42 @@
+package tema2.ficheros_2;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+        // Crea un programa que cuente las palabras que hay en un archivo de texto
+
+        // Preguntamos la ubicacion del archivo al usuario
+        System.out.println("Introduzca la ubicación del archivo: ");
+        Scanner sc = new Scanner(System.in);
+        String ruta = sc.nextLine();
+
+        // Llamamos al método ContarPalabras
+        
+
+
+    }
+
+    public static void ContarPalabras(String ruta) {
+        // Contamos todas las palabras del archivo
+        FileReader lector = null;
+        try {
+            lector = new FileReader(ruta);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        int palabras = 0;
+        while (lector.read() != -1) {
+            if (lector.read() == ' ') {
+                palabras++;
+            }
+        }
+    }
+
+
+}

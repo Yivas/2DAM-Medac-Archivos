@@ -1,0 +1,13 @@
+package prueba;
+
+public class Persona {
+
+    // Crea un JavaBean de la clase Persona, que tenga como atributos nombre, apellidos
+    // y fecha de nacimiento.
+
+    private String nombre;
+    private String apellidos;
+    private String fechaNacimiento;
+
+
+}

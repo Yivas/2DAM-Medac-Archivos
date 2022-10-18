@@ -1,0 +1,14 @@
+package Interfaz1;
+
+import javax.swing.JPanel;
+
+public class Interfaz1 extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Interfaz1() {
+
+	}
+
+}

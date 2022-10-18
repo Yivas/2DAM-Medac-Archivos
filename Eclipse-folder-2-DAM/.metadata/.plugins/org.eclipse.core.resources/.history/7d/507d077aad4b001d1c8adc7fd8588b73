@@ -1,0 +1,15 @@
+package persona;
+
+import java.util.Date;
+
+public class Persona {
+
+	String nombre;
+	String Apellidos;
+	Date fechaNacimiento;
+	
+	
+	
+	
+	
+}

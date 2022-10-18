@@ -1,0 +1,41 @@
+package productosApple;
+
+import java.util.ArrayList;
+
+public class Iphone {
+    
+    // Producto Iphone
+    private int id;
+    private String nombre;
+    private double precio;
+    private int stock;
+    private String procesador;
+    private int ram;
+    private int almacenamiento;
+    private String color;
+    private ArrayList <String> accesorios = new ArrayList <String>();
+
+    // Constructores
+    public Iphone() {
+        super();
+    }
+
+    public Iphone(int id, String nombre, double precio, int stock, String procesador, int ram, int almacenamiento, String color,ArrayList<String> accesorios) {
+        super();
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+        this.procesador = procesador;
+        this.ram = ram;
+        this.almacenamiento = almacenamiento;
+        this.color = color;
+        this.accesorios = accesorios;
+    }
+
+    // Get y set
+    
+
+
+
+}

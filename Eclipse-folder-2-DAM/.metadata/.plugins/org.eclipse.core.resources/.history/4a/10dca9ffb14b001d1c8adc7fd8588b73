@@ -1,0 +1,11 @@
+package equipo;
+
+import java.io.Serializable;
+
+public enum Lista {
+
+	activo,
+	banquillo
+	
+	
+}

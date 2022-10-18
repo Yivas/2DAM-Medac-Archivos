@@ -1,0 +1,52 @@
+package tema2.ficheros_2;
+
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+    public static void main(String[] args) {
+        // Escriba un programa en Java que lea un fichero de texto con varias líneas y cuente cuantas
+        // vocales hay de cada tipo (a,e,i,o,u). Para almacenar el número de vocales usa un array de 5
+        // posiciones
+
+        // Preguntamos la ubicacion del archivo al usuario
+        System.out.println("Introduzca la ubicación del archivo: ");
+        Scanner sc = new Scanner(System.in);
+        String ruta = sc.nextLine();
+        
+        // Creamos un array de 5 posiciones para almacenar el número de vocales
+        int[] vocales = new int[5];
+
+        // Llamamos al método ContarVocales
+
+
+        
+        
+        
+        
+    }
+
+    public static void ContarVocales(String ruta, int[] vocales) {
+        // Contamos las vocales del archivo
+        FileReader fr = new FileReader(ruta);
+        int c = fr.read();
+        while (c != -1) {
+            if (c == 'a') {
+                vocales[0]++;
+            } else if (c == 'e') {
+                vocales[1]++;
+            } else if (c == 'i') {
+                vocales[2]++;
+            } else if (c == 'o') {
+                vocales[3]++;
+            } else if (c == 'u') {
+                vocales[4]++;
+            }
+            c = fr.read();
+        }
+        fr.close();
+        
+    }
+
+}

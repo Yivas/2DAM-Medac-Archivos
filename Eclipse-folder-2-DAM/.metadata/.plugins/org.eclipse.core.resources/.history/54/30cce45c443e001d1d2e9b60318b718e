@@ -1,0 +1,23 @@
+package tema1;
+
+public class ejercicio {
+
+	private int nombre;
+	private int edad;
+	private int DNI;
+	private boolean sexo;
+	private float peso;
+	private float altura;
+	
+	public void PERSONA() {
+		
+	}
+	
+	public PERSONA(int nombre, int edad, int DNI, boolean sexo, float peso, private float altura) {
+		
+	}
+	
+	
+	    
+
+}

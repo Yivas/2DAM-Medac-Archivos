@@ -1,0 +1,13 @@
+package tema1;
+
+public class ejercicio {
+
+	private int nombre;
+	private int edad;
+	private int DNI;
+	private boolean sexo;
+	private float
+	
+	    
+
+}

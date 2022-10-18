@@ -1,0 +1,155 @@
+package tema1;
+
+import java.util.Random;
+
+public class persona1 {
+	private String nombre;
+	private int edad;
+	private boolean sexo = true;
+	private String DNI;
+	private float peso;
+	private float altura;
+	
+	//Constructores
+	
+	public persona1() {
+		
+	}
+	
+	public persona1(String nombre, int edad, boolean sexo) {
+		this.nombre= nombre;
+        this.edad= edad;
+        this.sexo= sexo;
+	}
+	
+	public persona1(String nombre, int edad, boolean sexo, String DNI) {
+		this.nombre= nombre;
+        this.edad= edad;
+        this.sexo= sexo;
+        this.DNI= DNI;
+	}
+	
+	public persona1(String nombre, int edad, boolean sexo, String DNI, float peso, float altura) {
+		this.nombre= nombre;
+        this.edad= edad;
+        this.sexo= sexo;
+        this.DNI= DNI;
+        this.peso= peso;
+        this.altura= altura;
+	}
+	
+	//Metodos
+	
+	
+
+	public boolean MayorEdad() {
+		if (edad>=17) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public String DniAleatorio() {
+		String Dni = "";
+		char Letra = (char) (new Random().nextInt(26) + 'A');
+		for (int i = 0; i < 7; i++) {
+			Dni+=new Random().nextInt(9);
+		}
+		
+		Dni = Dni + Letra;
+		return Dni;
+	}
+	
+	public boolean equals(persona1 Persona_comparar) {
+		boolean Validacion;
+		
+		if (this.DNI.equals(Persona_comparar.getDNI())) {
+			Validacion= true;
+		} else {
+			Validacion= false;
+		}
+		
+		return Validacion;
+		
+	}
+	
+	public int calcularIMC() {
+		int resultado;
+		int tmp;
+		tmp = this.peso/Math.pow(this.altura, 2);
+		if (tmp<20) {
+			
+		} else if (20<tmp<25) {
+			
+		} else {
+			
+		}
+		resultado = (int) (this.peso/Math.pow(this.altura, 2));
+		return resultado;
+	}
+	
+	
+	
+	//Get y Set
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getDNI() {
+		return DNI;
+	}
+
+	public void setDNI(String dNI) {
+		DNI = dNI;
+	}
+
+	public boolean isSexo() {
+		return sexo;
+	}
+
+	public void setSexo(boolean sexo) {
+		this.sexo = sexo;
+	}
+
+	public float getPeso() {
+		return peso;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	public float getAltura() {
+		return altura;
+	}
+
+	public void setAltura(float altura) {
+		this.altura = altura;
+	}
+	
+	public String toString() {
+		return "La persona tiene los siguientes datos:"+"\n"
+				+"Nombre:"+this.nombre+"\n"
+				+"Edad:"+this.edad+"\n"
+				+"DNI:"+this.DNI+"\n"
+				+"Sexo:"+this.sexo+"\n"
+				+"Peso:"+this.peso+"\n"
+				+"Altura:"+this.altura+"\n";
+		
+	}
+	
+}

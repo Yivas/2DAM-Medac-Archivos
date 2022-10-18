@@ -1,0 +1,21 @@
+package tema2.ficheros_2;
+
+public class Ejercicio2 {
+
+    public static void main(String[] args) {
+        // Crea un programa que cuente las palabras que hay en un archivo de texto
+
+        // Preguntamos la ubicacion del archivo al usuario
+        System.out.println("Introduzca la ubicación del archivo: ");
+        Scanner sc = new Scanner(System.in);
+        String ruta = sc.nextLine();
+
+        // Llamamos al método ContarPalabras
+        
+
+
+    }
+
+    
+
+}

@@ -1,0 +1,11 @@
+package productosApple;
+
+public class Accesorio {
+    
+    // Producto Accesorio
+    private int id;
+    private int nombre;
+    private String nombre;
+    
+
+}

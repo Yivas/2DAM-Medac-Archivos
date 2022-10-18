@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+    <destinatario>Doña María Martínez Expósito</destinatario>
+    <articulo>cinta de correr A403</articulo>
+    <direccion_de_entrega>Calle Mar Báltico 4, tercer piso, letra C</direccion_de_entrega>
+    <fecha_de_entrega>19-5-2022</fecha_de_entrega>
+</pedido>

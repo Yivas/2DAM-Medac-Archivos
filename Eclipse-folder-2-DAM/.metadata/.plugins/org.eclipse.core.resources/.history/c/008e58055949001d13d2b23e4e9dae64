@@ -1,0 +1,23 @@
+package tema2.ficheros_1;
+
+import java.io.File;
+
+public class Ejercicio7 {
+
+    public static void main(String[] args) {
+        // Realiza un programa que compruebe si se tiene acceso de ejecución y lectura a un
+        // fichero (pasado como argumento) y después modifique sus atributos denegando estos
+        // permisos. (No funcionan en Windows)
+
+        // Pedimos el nombre del archivo
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el nombre del archivo o directorio");
+        String nombre = sc.nextLine();
+        sc.close();
+
+        
+
+
+    }
+
+}
