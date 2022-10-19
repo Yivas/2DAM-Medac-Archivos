@@ -484,22 +484,19 @@ public class Main {
         System.out.println("Tras finalizar se imprimirá el pedido en un archivo de texto llamado Pedido.txt");
 
         // Creamos el Scanner para leer la entrada del usuario
-        Scanner scIdPedido1 = new Scanner(System.in);
+
         // Creamos el while para que el usuario pueda introducir varios productos
         int id = 1;
-        
         while (id != 0) {
-            id = scIdPedido1.nextInt();
+            Scanner scIdPedido = new Scanner(System.in);
+            id = scIdPedido.nextInt();
             if (id != 0) {
                 ALPedido.add(id);
                 System.out.println("¿Quiere añadir otro producto? (Introduzca el id del producto)");
                 System.out.println("Para finalizar introduzca 0");
+                scIdPedido.close();
             }
-            
         }
-        scIdPedido1.close();
-        
-        
 
         
 

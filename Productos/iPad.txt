@@ -1,0 +1,3 @@
+# Formato: id-nombre-precio-stock-procesador-ram-almacenamiento-color-accesorios
+301-iPad 2020-290-10-M6-8-64-Rojo-101,102
+302-iPad 2021-350-10-M4-16-128-Azul-101,102

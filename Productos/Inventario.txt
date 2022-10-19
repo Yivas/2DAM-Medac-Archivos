@@ -1,0 +1,111 @@
+----------------- Accesorios -----------------
+Id: 101
+Nombre: Cable
+Precio: 20.0
+Stock: 5
+Compatible con: 
+- 301 - iPad 2020
+-----------------
+Id: 101
+Nombre: Cable
+Precio: 20.0
+Stock: 5
+Compatible con: 
+- 301 - iPad 2020
+-----------------
+
+----------------- AirPods -----------------
+Id: 201
+Nombre: AirPods1
+Precio: 219.0
+Stock: 5
+Color: Rojo
+Compatible con: 
+- 301 - iPad 2020
+- 301 - iPad 2020
+-----------------
+Id: 201
+Nombre: AirPods1
+Precio: 219.0
+Stock: 5
+Color: Rojo
+Compatible con: 
+- 301 - iPad 2020
+- 301 - iPad 2020
+-----------------
+
+----------------- IWatch -----------------
+Id: 1
+Nombre: IWatch 2
+Precio: 150.0
+Stock: 5
+Color: Rojo
+Compatible con: 
+- 3 - NO ENCONTRADO
+- 5 - NO ENCONTRADO
+- 10 - NO ENCONTRADO
+-----------------
+
+----------------- Iphone -----------------
+Id: 401
+Nombre: Iphone 5
+Precio: 350.0
+Stock: 10
+Procesador: M50
+Ram: 2
+Almacenamiento: 18
+Color: Rojo
+Accesorios: 
+- 101 - Cable
+- 102 - Carcasa
+- 103 - NO ENCONTRADO
+-----------------
+Id: 401
+Nombre: Iphone 5
+Precio: 350.0
+Stock: 10
+Procesador: M50
+Ram: 2
+Almacenamiento: 18
+Color: Rojo
+Accesorios: 
+- 101 - Cable
+- 102 - Carcasa
+- 103 - NO ENCONTRADO
+-----------------
+
+----------------- IWatch -----------------
+Id: 2
+Nombre: IWatch 3
+Precio: 190.0
+Stock: 10
+Color: Blanco
+Compatible con: 
+- 3 - NO ENCONTRADO
+- 5 - NO ENCONTRADO
+- 10 - NO ENCONTRADO
+-----------------
+
+----------------- Mac -----------------
+Id: 501
+Nombre: Mac1
+Precio: 800.0
+Stock: 5
+Procesador: M4
+Ram: 12
+Almacenamiento: 256
+Accesorios: 
+- 101 - Cable
+- 102 - Carcasa
+-----------------
+Id: 501
+Nombre: Mac1
+Precio: 800.0
+Stock: 5
+Procesador: M4
+Ram: 12
+Almacenamiento: 256
+Accesorios: 
+- 101 - Cable
+- 102 - Carcasa
+-----------------
