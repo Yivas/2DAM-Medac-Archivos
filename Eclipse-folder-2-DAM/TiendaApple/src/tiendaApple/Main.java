@@ -5,8 +5,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import productosApple.Accesorio;
@@ -28,7 +31,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         // Se crean 6 ArrayList para guardar los productos de cada tipo
-        
         
         // Los datos se cargarán desde 6 archivos .txt, uno por tipo de producto
 
@@ -159,7 +161,6 @@ public class Main {
 
         scIphone.close();
 
-
         // Mac
         // id-nombre-precio-stock-procesador-ram-almacenamiento-accesorios
 
@@ -220,7 +221,6 @@ public class Main {
         
         // Escribimos en el archivo todos los productos y sus atributos
         // usando BufferedWriter
-
 
         // Accesorio
 
@@ -476,35 +476,36 @@ public class Main {
         // Cerrar el archivo
         bwEscritura.close();
 
-        // Preguntamos al usuario que productos quiere añadir al pedido 
-        // y añadimos su id a un arraylist y mostramos una pregunta de 
-        // confirmacion indicando el nombre del producto
-        System.out.println("¿Qué productos quiere añadir al pedido? (Introduzca el id del producto)");
-        System.out.println("Para finalizar introduzca 0");
-        System.out.println("Tras finalizar se imprimirá el pedido en un archivo de texto llamado Pedido.txt");
+        // // Preguntamos al usuario que productos quiere añadir al pedido 
+        // // y añadimos su id a un arraylist y mostramos una pregunta de 
+        // // confirmacion indicando el nombre del producto
+        // System.out.println("¿Qué productos quiere añadir al pedido? (Introduzca el id del producto)");
+        // System.out.println("Para finalizar introduzca 0");
+        // System.out.println("Tras finalizar se imprimirá el pedido en un archivo de texto llamado Pedido.txt");
 
-        // Creamos el Scanner para leer la entrada del usuario
-        Scanner scIdPedido1 = new Scanner(System.in);
-        // Creamos el while para que el usuario pueda introducir varios productos
-        int id = 1;
+        // // Creamos el Scanner para leer la entrada del usuario
+        // Scanner scIdPedido1 = new Scanner(System.in);
+        // // Creamos el while para que el usuario pueda introducir varios productos
+        // int id = 1;
         
-        while (id != 0) {
-            id = scIdPedido1.nextInt();
-            if (id != 0) {
-                ALPedido.add(id);
-                System.out.println("¿Quiere añadir otro producto? (Introduzca el id del producto)");
-                System.out.println("Para finalizar introduzca 0");
-            }
+        // while (id != 0) {
+        //     id = scIdPedido1.nextInt();
+        //     if (id != 0) {
+        //         ALPedido.add(id);
+        //         System.out.println("¿Quiere añadir otro producto? (Introduzca el id del producto)");
+        //         System.out.println("Para finalizar introduzca 0");
+        //     }
             
-        }
-        scIdPedido1.close();
+        // }
+        // scIdPedido1.close();
         
-        
-
-        
+        ALPedido.add(101);
+        ALPedido.add(202);
+        ALPedido.add(303);
+        ALPedido.add(404);        
 
         // Creamos el archivo de texto para guardar el pedido
-        File archivoPedido = new File("Pedido.txt");
+        File archivoPedido = new File(ruta + "\\Pedido.txt");
         archivoPedido.createNewFile();
         BufferedWriter bwPedido = new BufferedWriter(new FileWriter(archivoPedido));
         
@@ -532,42 +533,87 @@ public class Main {
         // Escribimos los productos del pedido buscando sus datos por la id
         // guardada en el arraylist ALPedido
 
+        // Guardamos el precio total del pedido
+        double precioTotal = 0;
+
         contador = 0;
         while (ALPedido.size() > contador) {
             // Buscamos el producto por su id
             int idProducto = ALPedido.get(contador);
-            // Usando la id del producto extramos a que arraylist de productos pertenece
-            // usando el metodo buscarTipoProducto
-            int tipoProducto = buscarTipoProducto(idProducto);
             // Sabiendo el tipo de producto buscamos el producto en su arraylist
             // y guardamos los datos que necesitamos en un ArrayList de String
             // usando el metodo buscarDatosPedido
-            ArrayList<String> datosProducto = buscarDatosPedido(idProducto, tipoProducto);
+            ArrayList<String> datosProducto = buscarDatosPedido(idProducto);
             // Escribimos los datos del producto en el archivo de texto
             bwPedido.write("- " + idProducto + " - " + datosProducto.get(0));
+            // Guardamos el precio del producto en una variable
+            precioTotal += Double.parseDouble(datosProducto.get(1));
             bwPedido.newLine();
-            bwPedido.write("- " + datosProducto.get(1));
+            bwPedido.write("- " + datosProducto.get(1) + "€");
             bwPedido.newLine();
             bwPedido.write("-----------------");
             bwPedido.newLine();
             contador++;
-
             
         }
 
+        // Escribimos el total del pedido
+        bwPedido.write("----- Precio Total -----");
+        bwPedido.newLine();
+        bwPedido.write("- " + precioTotal + "€");
+        bwPedido.newLine();
+        bwPedido.write("-----------------");
+        bwPedido.newLine();
 
+        // Escribimos las sugerencias de accesorios
+        bwPedido.write("----- Sugerencias de accesorios -----");
+        bwPedido.newLine();
+        // Buscamos los accesorios que se pueden añadir al pedido
+        ArrayList<Integer> accesoriosSugeridos = buscarAccesoriosSugeridos(ALPedido);
+        // Escribimos los accesorios sugeridos en el archivo de texto
+        contador = 0;
+        // Buscamos los accesorios del ArrayList de accesorios los cuales
+        // son compatibles con los productos del pedido
+        Set <Integer> accesoriosSugeridosSet = new HashSet<Integer>();
+        while (ALPedido.size() > contador) {
+            // Cojemos el id del producto
+            int idProducto = ALPedido.get(contador);
+            // Buscamos el tipo de producto
+            int tipoProducto = buscarTipoProducto(idProducto);
+            // Si el producto es un Mac, iPad o Iphone buscamos los accesorios
+            // que son compatibles con el producto
+            if (tipoProducto == 1 ||tipoProducto == 2 || tipoProducto == 3) {
+                // Buscamos que accesorios son compatibles con el Mac
+                // usando metodo obtenerAccesoriosMac
+                accesoriosSugeridosSet.add(idProducto);
+            }
+            contador++;
+        }
 
+        // Escribimos los accesorios sugeridos en el archivo de texto
+        ArrayList<Integer> accesoriosSugeridosArray = new ArrayList<Integer>(accesoriosSugeridosSet);
+        contador = 0;
+        while (accesoriosSugeridosSet.size() > contador) {
+            // Buscamos el accesorio por su id
+            int idAccesorio = accesoriosSugeridosArray.get(contador);
+            // Sabiendo el tipo de accesorio buscamos el accesorio en su arraylist
+            // y guardamos los datos que necesitamos en un ArrayList de String
+            // usando el metodo buscarDatosPedido
+            ArrayList<String> datosAccesorio = buscarDatosPedido(idAccesorio);
+            // Escribimos los datos del accesorio en el archivo de texto
+            bwPedido.write("- " + idAccesorio + " - " + datosAccesorio.get(0));
+            bwPedido.newLine();
+            bwPedido.write("- " + datosAccesorio.get(1) + "€");
+            bwPedido.newLine();
+            bwPedido.write("-----------------");
+            bwPedido.newLine();
+            contador++;
+        }
 
+        bwPedido.write("-----------------------------------------");
 
-
-
-
-        
-        
-
-
-
-        
+        // Cerramos el BufferedWriter
+        bwPedido.close();
 
     }
 
@@ -694,7 +740,7 @@ public class Main {
         return precio;
     }
 
-    private static ArrayList buscarDatosPedido(int id, int tipo) {
+    private static ArrayList buscarDatosPedido(int id) {
         // Buscamos los datos del producto con el id y el tipo entre todos los ArrayList
         // y que devuelva un ArrayList con los datos del producto
         // y que devuelva null si no se encuentra
@@ -703,13 +749,25 @@ public class Main {
         ArrayList <String> datos= new ArrayList<String>();
         String nombre = buscarNombre(id);
         double precio = buscarPrecio(id);
+        datos.add(nombre);
+        datos.add(String.valueOf(precio));
         
         return datos;
         
     }
 
-
-
-
+    private static ArrayList buscarAccesoriosSugeridos(ArrayList <Integer> idAccesorios) {
+        // Buscamos los accesorios que contienen la lista de idAccesorios
+        // y que devuelva un ArrayList con los los nombres y precios de los accesorios
+        // y que devuelva null si no se encuentra
+        ArrayList <String> datos= new ArrayList<String>();
+        for (int i = 0; i < idAccesorios.size(); i++) {
+            String nombre = buscarNombre(idAccesorios.get(i));
+            double precio = buscarPrecio(idAccesorios.get(i));
+            datos.add(nombre);
+            datos.add(String.valueOf(precio));
+        }
+        return datos;
+    }
 
 }
