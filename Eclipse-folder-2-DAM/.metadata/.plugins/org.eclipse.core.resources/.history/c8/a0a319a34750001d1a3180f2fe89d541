@@ -1,0 +1,10 @@
+package tema5;
+
+public class Hilo1 implements Thread{
+
+    public static void main(String[] args) {
+        
+
+    }
+
+}
