@@ -1,5 +1,5 @@
 # Formato : id-nombre-precio-stock-color-compatibilidad
-201-AirPods1-199-10-Blanco-401,301
-202-AirPods1 Pro-299-5-Blanco-402,302
-203-AirPods2-239-10-Blanco-401,301
-204-AirPods2 Pro-339-5-Blanco-402,302
+201-AirPods1-199-10-Blanco-401,301,501,502
+202-AirPods1 Pro-299-5-Blanco-402,302,501,502
+203-AirPods2-239-10-Blanco-401,301,501,502
+204-AirPods2 Pro-339-5-Blanco-402,302,501,502

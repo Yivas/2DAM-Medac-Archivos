@@ -8,7 +8,7 @@
 		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.jdt.internal.ui.jarpackager.JarPackageWizard"/>
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.ui.wizards.export.ZipFile"/>
 		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.jdt.ui.Java"/>
@@ -18,6 +18,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="D:\Downloads\New folder (2)\Pablo_Mora_Giron_tienda_Apple.zip"/>
 			<item value="C:\Users\Usuario\Documents\Accesoadatos\Actividades\Mora_Girón_Pablo_ficheros_e2.zip"/>
 			<item value="C:\Users\Usuario\Documents\Accesoadatos\Actividades\FICHEROS_1.zip"/>
 			<item value="C:\Users\Usuario\Documents\Accesoadatos\Actividades\ACT12_nombre_estudiante.zip"/>

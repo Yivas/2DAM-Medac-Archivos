@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar"
+        ],
+        "exclude": [
+            "d:\\Documents\\Portatil medac\\2DAM-Medac-Archivos\\Interfaces\\Eclipse\\productosApple.jar"
+        ]
+    }
+}

@@ -1,3 +1,4 @@
 # Formato: id-nombre-precio-stock-procesador-ram-almacenamiento-color-accesorios
-401-Iphone 5-450-10-M50-2-18-Rojo-201,203
-402-Iphone 9-660-300-M10-6-128-Negro-202,204
+401-Iphone 5-450-10-M50-2-18-Rojo-201,203,101,102
+402-Iphone 9-660-20-M10-6-128-Negro-202,204,101,102
+403-Iphone X-999-2-M10-8-128-Rojo-201,203,101,102

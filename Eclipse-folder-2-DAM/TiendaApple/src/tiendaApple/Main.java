@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -240,7 +239,7 @@ public class Main {
         bwEscritura.write("----------------- Accesorios -----------------");
         bwEscritura.newLine();
         while (ALAccesorio.size() > contador) {
-            Accesorio accesorio = ALAccesorio.get(0);
+            Accesorio accesorio = ALAccesorio.get(contador);
             bwEscritura.write("Id: " + accesorio.getId());
             bwEscritura.newLine();
             bwEscritura.write("Nombre: " + accesorio.getNombre());
@@ -278,7 +277,7 @@ public class Main {
         bwEscritura.write("----------------- AirPods -----------------");
         bwEscritura.newLine();
         while (ALAirPods.size() > contador) {
-            AirPods airpods = ALAirPods.get(0);
+            AirPods airpods = ALAirPods.get(contador);
             bwEscritura.write("Id: " + airpods.getId());
             bwEscritura.newLine();
             bwEscritura.write("Nombre: " + airpods.getNombre());
@@ -318,7 +317,7 @@ public class Main {
         bwEscritura.write("----------------- IWatch -----------------");
         bwEscritura.newLine();
         while (ALIWatch.size() > contador) {
-            IWatch iwatch = ALIWatch.get(0);
+            IWatch iwatch = ALIWatch.get(contador);
             bwEscritura.write("Id: " + iwatch.getId());
             bwEscritura.newLine();
             bwEscritura.write("Nombre: " + iwatch.getNombre());
@@ -362,7 +361,7 @@ public class Main {
         bwEscritura.newLine();
         contador = 0;
         while (ALIphone.size() > contador) {
-            Iphone iphone = ALIphone.get(0);
+            Iphone iphone = ALIphone.get(contador);
             bwEscritura.write("Id: " + iphone.getId());
             bwEscritura.newLine();
             bwEscritura.write("Nombre: " + iphone.getNombre());
@@ -407,7 +406,7 @@ public class Main {
         bwEscritura.newLine();
         contador = 0;
         while (ALIWatch.size() > contador) {
-            IWatch iwatch = ALIWatch.get(0);
+            IWatch iwatch = ALIWatch.get(contador);
             bwEscritura.write("Id: " + iwatch.getId());
             bwEscritura.newLine();
             bwEscritura.write("Nombre: " + iwatch.getNombre());
@@ -448,7 +447,7 @@ public class Main {
         bwEscritura.newLine();
         contador = 0;
         while (ALMac.size() > contador) {
-            Mac mac = ALMac.get(0);
+            Mac mac = ALMac.get(contador);
             bwEscritura.write("Id: " + mac.getId());
             bwEscritura.newLine();
             bwEscritura.write("Nombre: " + mac.getNombre());
@@ -502,7 +501,7 @@ public class Main {
         ALPedido.add(101);
         ALPedido.add(202);
         ALPedido.add(303);
-        ALPedido.add(404);        
+        ALPedido.add(403);        
 
         // Creamos el archivo de texto para guardar el pedido
         File archivoPedido = new File(ruta + "\\Pedido.txt");
@@ -568,11 +567,9 @@ public class Main {
         // Escribimos las sugerencias de accesorios
         bwPedido.write("----- Sugerencias de accesorios -----");
         bwPedido.newLine();
-        // Buscamos los accesorios que se pueden añadir al pedido
-        ArrayList<Integer> accesoriosSugeridos = buscarAccesoriosSugeridos(ALPedido);
         // Escribimos los accesorios sugeridos en el archivo de texto
         contador = 0;
-        // Buscamos los accesorios del ArrayList de accesorios los cuales
+        // Buscamos los accesorios del ArrayList los cuales
         // son compatibles con los productos del pedido
         Set <Integer> accesoriosSugeridosSet = new HashSet<Integer>();
         while (ALPedido.size() > contador) {

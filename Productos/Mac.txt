@@ -1,3 +1,3 @@
 # Formato: id-nombre-precio-stock-procesador-ram-almacenamiento-accesorios
-501-Mac1-800-5-M4-12-256-101,102
-502-Mac1 Pro-999-2-M2-24-500-101,102
+501-Mac1-800-5-M4-12-256-201,203,101,102
+502-Mac1 Pro-999-2-M2-24-500-201,203,101,102

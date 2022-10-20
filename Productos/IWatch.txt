@@ -1,3 +1,3 @@
 # Formato: id-nombre-precio-stock-color-compatibilidad
-1-IWatch 2-150-5-Rojo-3,5,10
-2-IWatch 3-190-10-Blanco-3,5,10
+601-IWatch 2-150-5-Rojo-401,402
+602-IWatch 3-190-10-Blanco-402,403
