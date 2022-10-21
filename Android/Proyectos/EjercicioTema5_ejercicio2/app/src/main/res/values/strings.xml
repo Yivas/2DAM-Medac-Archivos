@@ -4,5 +4,6 @@
     <string name="textViewNombre">Nombre:</string>
     <string name="textViewEdad">Edad:</string>
 
+    <string name="buttonResultado">Ver resultado</string>
 
 </resources>

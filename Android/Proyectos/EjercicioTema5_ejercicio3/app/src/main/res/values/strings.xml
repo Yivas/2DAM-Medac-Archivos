@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EjercicioTema5_ejercicio3</string>
+
+    <string name="button_calcular">Calcular IRPF</string>
+
+    <string name="textView_sueldo">Introduzca su sueldo</string>
+    <string name="textView_irpf">Su IRPF es</string>
+
+</resources>
