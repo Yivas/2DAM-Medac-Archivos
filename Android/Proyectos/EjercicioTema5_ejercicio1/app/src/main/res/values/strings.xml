@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EjercicioTema5_ejercicio1</string>
+    <string name="texto_numero1">Numero 1</string>
+    <string name="texto_numero2">Numero 2</string>
+
+    <string name="checkBox_sumar">Sumar</string>
+    <string name="checkBox_restar">Restar</string>
+
+    <string name="text_resultado">Resultado</string>
+
+    <string name="button_calcular">Calcular</string>
+
+
+</resources>

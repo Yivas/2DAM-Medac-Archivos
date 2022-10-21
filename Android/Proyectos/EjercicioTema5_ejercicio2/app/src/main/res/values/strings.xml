@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EjercicioTema5_ejercicio2</string>
+
+    <string name="textViewNombre">Nombre:</string>
+    <string name="textViewEdad">Edad:</string>
+
+
+</resources>
