@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editText_sueldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="101dp"
@@ -53,13 +53,15 @@
         android:layout_marginBottom="68dp"
         android:ems="10"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/textView_IRPF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_sueldo" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_sueldo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/editText_IRPF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -69,9 +71,11 @@
         android:ems="10"
         android:enabled="false"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/button_calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_IRPF" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_IRPF"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
