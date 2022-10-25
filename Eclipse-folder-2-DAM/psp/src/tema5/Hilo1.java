@@ -4,11 +4,16 @@ public class Hilo1 extends Thread {
     
     private String nombre;
     private int dormir;
+    
+    public Hilo1() {
+        
+    }
 
     public Hilo1(String nombre, int dormir) {
         this.nombre = nombre;
         this.dormir = dormir;
     }
+
 
     @Override
     public void run() {

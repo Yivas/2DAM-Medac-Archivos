@@ -1,0 +1,10 @@
+package tema4.ejercicio3;
+
+public class Hilo1 extends Thread {
+    
+    
+    
+    
+    
+
+}

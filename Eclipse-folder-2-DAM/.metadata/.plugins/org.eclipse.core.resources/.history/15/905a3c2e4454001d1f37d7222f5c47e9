@@ -1,0 +1,15 @@
+package tema4.ejercicio5;
+
+public class Hilo1 {
+
+    public Hilo1() { 
+    }
+    
+    @Override
+    public void run() {
+        
+    }
+    
+    
+    
+}
