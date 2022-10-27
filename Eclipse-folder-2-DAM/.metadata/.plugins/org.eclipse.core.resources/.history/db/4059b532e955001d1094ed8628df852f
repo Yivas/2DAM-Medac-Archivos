@@ -30,7 +30,7 @@ public class Main {
         // campos: TITULO,AÑO DE RODAJE,DURACIÓN,ACTOR PRINCIPAL.
 
         // Tomando como base el fichero anterior, crea un documento XML usando DOM.
-        File archivo_base = new File("C:\\Dom\\pelis.dat");
+        File archivo_base = new File("C:\\Users\\Usuario\\Documents\\Portatil_Medac\\2DAM-Medac-Archivos\\Accesoadatos\\XML\\Manejar_XML_con_DOM\\pelis.dat");
         
         // Creamos el documento XML
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -89,7 +89,7 @@ public class Main {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource soPeliculas = new DOMSource(doc);
-        StreamResult result = new StreamResult(new File("C:\\Dom\\peliculas.xml"));
+        StreamResult result = new StreamResult(new File("C:\\Users\\Usuario\\Documents\\Portatil_Medac\\2DAM-Medac-Archivos\\Accesoadatos\\XML\\Manejar_XML_con_DOM\\peliculas.xml"));
 
         
 
@@ -116,7 +116,7 @@ public class Main {
         // Muestra la/s películas que duran más de 120 minutos con DOM.
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(new File("C:\\Dom\\peliculas.xml"));
+        Document document = builder.parse(new File("C:\\Users\\Usuario\\Documents\\Portatil_Medac\\2DAM-Medac-Archivos\\Accesoadatos\\XML\\Manejar_XML_con_DOM\\peliculas.xml"));
 
         System.out.println(recorrerDOMyMostrar(document));
 
@@ -124,7 +124,6 @@ public class Main {
     }
 
     public static String recorrerDOMyMostrar(Document doc){
-        // Muestra la/s películas que duran más de 120 minutos con DOM
 
         String datos_nodo[] = null;
         String salida = "";
@@ -135,31 +134,22 @@ public class Main {
     
         // Obtiene una lsita de nodos con todos los nodos hijo del raíz
         NodeList nodeList = raiz.getChildNodes();
-        
+    
         // Procesa los nodos hijo
         for (int i = 0; i < nodeList.getLength(); i++){
             node = nodeList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE){
                 // Es un nodo Pelicula
                 datos_nodo = procesarPelicula(node);
-                // Comprueba si el nodo 2 es mayor a 120
-                if (Integer.parseInt(datos_nodo[2]) > 120) {
-                    salida = salida + "\n " + "Titulo es: " + datos_nodo[0];
-                    salida = salida + "\n " + "Año es: " + datos_nodo[1];
-                    salida = salida + "\n " + "Duracion es: " + datos_nodo[2];
-                    salida = salida + "\n " + "Actor es: " + datos_nodo[3];
-                }
-                
+                salida = salida + "\n " + "Titulo es: " + datos_nodo[0];
+                salida = salida + "\n " + "Año es: " + datos_nodo[1];
+                salida = salida + "\n " + "Duracion es: " + datos_nodo[2];
+                salida = salida + "\n " + "Actor es: " + datos_nodo[3];
             }
         }
         return salida;
-        
-        
-        
     }
 
-    
-    
     protected static String[] procesarPelicula(Node n){
 
         String datos[] = new String[4];
