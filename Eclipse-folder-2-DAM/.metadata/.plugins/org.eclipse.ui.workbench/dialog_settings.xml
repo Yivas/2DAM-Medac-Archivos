@@ -18,6 +18,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\Usuario\Downloads\Pablo_Mora_Girón_Actividad_T4.zip"/>
 			<item value="C:\Users\Usuario\Downloads\psp java\Pablo_Mora_Giron_Actividades_Tema4.zip"/>
 			<item value="C:\Users\Usuario\Downloads\Pablo_Mora_GironT3_MANEJAR_XML_PELICULAS.zip"/>
 			<item value="D:\Downloads\New folder (2)\Pablo_Mora_Giron_tienda_Apple.zip"/>
