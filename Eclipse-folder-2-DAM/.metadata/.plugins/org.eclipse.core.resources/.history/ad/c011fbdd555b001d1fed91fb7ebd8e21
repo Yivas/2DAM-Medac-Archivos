@@ -1,0 +1,28 @@
+package tema6.ejercicio1;
+
+public class Productor extends Thread {
+
+    private Buffer buffer;
+    private final String letras = "abcdefghijklmnñopqrstuvxyz";
+
+    public Productor(Buffer buffer){
+        this.buffer = buffer;
+    }
+    
+    public void run(){
+
+        while(true){
+            try {
+                char c = letras.charAt((int) (Math.random() * letras.length()));
+                buffer.producir(c);
+                System.out.println("Depositado el caracter " + c + " del buffer, numero " + buffer.getSiguiente()) + " del buffer";
+                
+                sleep((int) (Math.random() * 4000));
+            } catch (InterruptedException ex) {
+                System.out.println("Error en el productor");
+            }
+        }
+
+    }
+
+}

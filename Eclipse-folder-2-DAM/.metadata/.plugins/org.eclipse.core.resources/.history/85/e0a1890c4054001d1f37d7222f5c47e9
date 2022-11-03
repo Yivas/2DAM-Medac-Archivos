@@ -1,8 +1,0 @@
-package tema4.ejercicio1;
-
-public class Hilo1 extends Thread {
-
-    
-
-
-}
