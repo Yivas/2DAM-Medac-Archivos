@@ -1,0 +1,10 @@
+INSERT INTO `datos_personales` VALUES (1, "Iván", "Ortega", "Dirección", "Sevilla", 41020, 611547689, "ivan@gmail.es", "2003-10-01");
+INSERT INTO `datos_personales` VALUES (2, "Manolo", "Pérez", "DirecciónManolo", "Sevilla", 41020, 433235465, "manolo@gmail.es", "0000-00-00");
+INSERT INTO `datos_personales` VALUES (3, "Juan", "Caballo", "DirecciónJuan", "Málaga", 29030, 657345239, "juan@gmail.com", "1994-10-01");
+INSERT INTO `datos_personales` VALUES (4, "Paco", "Antonio", "DirecciónAntonio", "Cádiz", 45234, 256156953, "paco@gmail.com", "2002-02-02");
+INSERT INTO `datos_personales` VALUES (5, "Amador", "Rivas", "DireccionAmador", "Madrid", 87345, 123456789, "amador@gmail.es", "1990-01-12");
+INSERT INTO `datos_personales` VALUES (6, "Alvaro ", "Valles", "DireccionAlvaro", "Valencia", 34124, 644245789, "alvaro@gmail.es", "1966-12-23");
+INSERT INTO `datos_personales` VALUES (7, "Elia", "Patiño", "DireccionElia", "Asturias", 78762, 79058353, "elia@gmail.com", "1998-09-09");
+INSERT INTO `datos_personales` VALUES (8, "Eulalia ", "Lozano", "DireccionEulalia", "Galicia", 12343, 798632654, "eulalia@outlook.es", "2000-05-13");
+INSERT INTO `datos_personales` VALUES (9, "Richard ", "Valdivia", "DireccionRichard", "Palencia", 12346, 985137355, "richard@outlook.uk", "2001-10-03");
+INSERT INTO `datos_personales` VALUES (10, "Maria ", "Ortega", "DireccionMaria", "Jaén", 75623, 987654264, "maria@hotmail.com", "1969-02-05");
