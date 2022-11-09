@@ -966,3 +966,5 @@ Caused by: java.lang.Exception: File not found: C:\Users\Usuario\Downloads\demo\
 2022-11-08 10:07:25,117 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-11-08 10:07:25,117 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-11-08 10:07:25,117 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Usuario\Documents\Portatil_Medac\2DAM-Medac-Archivos\Eclipse-folder-2-DAM\demo\src\test\resources
+2022-11-08 11:57:50,331 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-11-09 11:18:03,690 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

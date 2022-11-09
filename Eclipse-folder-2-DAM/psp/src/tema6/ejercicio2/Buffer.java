@@ -6,6 +6,7 @@ public class Buffer extends Thread{
 
     private char[] buffer;
     private int siguiente;
+    private int siguienteAConsumir;
     private boolean estaVacia;
     private boolean estaLlena;
     private static Semaphore semaforo = new Semaphore(1);
@@ -13,6 +14,7 @@ public class Buffer extends Thread{
     public Buffer(int tamaño){
         this.buffer = new char[tamaño];
         this.siguiente = 0;
+        this.siguienteAConsumir = 0;
         this.estaVacia = true;
         this.estaLlena = false;
     }
@@ -34,15 +36,15 @@ public class Buffer extends Thread{
             e.printStackTrace();
         }
 
-        siguiente--;
+        char letra = this.buffer[this.siguienteAConsumir];
+        siguienteAConsumir++;
         this.estaLlena = false;
-        if(siguiente == 0){
+        if(siguienteAConsumir == siguiente){
             this.estaVacia = true;
         }
-        
         notifyAll();
         semaforo.release();
-        return this.buffer[this.siguiente];
+        return letra;
     }
     
     public synchronized void producir(char letra){
@@ -80,6 +82,9 @@ public class Buffer extends Thread{
         return siguiente;
     }
     
+    public int getSiguienteAConsumir() {
+        return siguienteAConsumir;
+    }
     
     
 
