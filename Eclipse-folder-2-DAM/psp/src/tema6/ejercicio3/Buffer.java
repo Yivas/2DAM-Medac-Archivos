@@ -3,7 +3,7 @@ package tema6.ejercicio3;
 public class Buffer extends Thread {
 
     // Este  problema  consiste  en  un  sistema  con  tres  procesos,  que  serán  los 
-        // «fumadores», y un proceso, al que podremos considerar el «estanquero», que dará 
+    // «fumadores», y un proceso, al que podremos considerar el «estanquero», que dará 
         // material  a  los  fumadores.  Cada  fumador  está  continuamente  deseando  fumar  un 
         // cigarrillo.  Sin  embargo,  para  fumar,  necesita  tres  ingredientes:  tabaco,  papel  y 
         // fósforos. Cada uno de los tres fumadores tendrá un material de los necesarios, por lo 

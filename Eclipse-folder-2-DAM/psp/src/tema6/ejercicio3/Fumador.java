@@ -1,7 +1,5 @@
 package tema6.ejercicio3;
 
-import java.util.Random;
-
 public class Fumador extends Thread {
 
     private Buffer buffer;

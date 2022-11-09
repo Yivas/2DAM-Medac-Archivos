@@ -39,8 +39,6 @@ public class Buffer extends Thread{
         if(siguiente == 0){
             this.estaVacia = true;
         }
-        
-        notifyAll();
         semaforo.release();
         return this.buffer[this.siguiente];
     }
@@ -68,8 +66,6 @@ public class Buffer extends Thread{
         if(siguiente == this.buffer.length){
             this.estaLlena = true;
         }
-        
-        notifyAll();
         
         semaforo.release();
     }

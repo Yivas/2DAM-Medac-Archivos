@@ -24,11 +24,6 @@ public class Estanquero extends Thread {
                         System.out.println("Estanquero pone tabaco y papel");
                         break;
                 }
-                try {
-                    Thread.sleep((int) (Math.random() * 2000));
-                } catch (InterruptedException ex) {
-                    System.out.println("Error en el estanquero");
-                }
             }
         }
     }

@@ -9,7 +9,6 @@ public class Buffer extends Thread{
     private int siguienteAConsumir;
     private boolean estaVacia;
     private boolean estaLlena;
-    private static Semaphore semaforo = new Semaphore(1);
     
     public Buffer(int tamaño){
         this.buffer = new char[tamaño];
@@ -29,12 +28,6 @@ public class Buffer extends Thread{
             }
         }
         
-        try {
-            semaforo.acquire();
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
 
         char letra = this.buffer[this.siguienteAConsumir];
         siguienteAConsumir++;
@@ -43,7 +36,6 @@ public class Buffer extends Thread{
             this.estaVacia = true;
         }
         notifyAll();
-        semaforo.release();
         return letra;
     }
     
@@ -57,12 +49,6 @@ public class Buffer extends Thread{
             }
         }
         
-        try {
-            semaforo.acquire();
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
         
         buffer[siguiente] = letra;
         siguiente++;
@@ -72,8 +58,6 @@ public class Buffer extends Thread{
         }
         
         notifyAll();
-        
-        semaforo.release();
     }
 
     // Getters y setters
