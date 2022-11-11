@@ -59,7 +59,7 @@ public class Actividad6 {
         frame.getContentPane().add(lbl_texto_titulo);
         
         textField_inicial = new JTextField();
-        textField_inicial.setBounds(64, 93, 111, 20);
+        textField_inicial.setBounds(64, 65, 111, 20);
         frame.getContentPane().add(textField_inicial);
         textField_inicial.setColumns(10);
         
@@ -72,7 +72,7 @@ public class Actividad6 {
         textField_final.setColumns(10);
         
         JComboBox comboBox_selector_tipo = new JComboBox();
-        comboBox_selector_tipo.setModel(new DefaultComboBoxModel(new String[] {"Binario", "Octal","Hexadecimal"}));
+        comboBox_selector_tipo.setModel(new DefaultComboBoxModel(new String[] {"Binario", "Octal", "Hexadecimal", "Decimal"}));
         comboBox_selector_tipo.setBounds(64, 124, 111, 22);
         frame.getContentPane().add(comboBox_selector_tipo);
         
@@ -85,60 +85,74 @@ public class Actividad6 {
             public void actionPerformed(ActionEvent e) {
                 // Comprobamos que el campo textField_inicial no esté vacío
                 if (!textField_inicial.getText().isEmpty()) {
-                    // Comprobamos que el campo textField_inicial sea un número
-                    if (esNumero(textField_inicial.getText())) {
-                        // Dependiendo del valor de comboBox_selector_tipo, convertimos el número
-                        // y lo mostramos en textField_final
-                        switch (comboBox_selector_tipo.getSelectedItem().toString()) {
-                            case "Binario":
-                                textField_final.setText(convertirBinario(textField_inicial.getText()));
-                                break;
-                            case "Octal":
-                                textField_final.setText(convertirOctal(textField_inicial.getText()));
-                                break;
-                            case "Hexadecimal":
-                                textField_final.setText(convertirHexadecimal(textField_inicial.getText()));
-                                break;
-                        }
+                    // Dependiendo del valor de comboBox_selector_tipo, convertimos el número
+                    // y lo mostramos en textField_final
+                    switch (comboBox_selector_tipo.getSelectedItem().toString()) {
+                        case "Binario":
+                            textField_final.setText(convertirBinario(textField_inicial.getText().toString()));
+                            break;
+                        case "Octal":
+                            textField_final.setText(convertirOctal(textField_inicial.getText().toString()));
+                            break;
+                        case "Hexadecimal":
+                            textField_final.setText(convertirHexadecimal(textField_inicial.getText().toString()));
+                            break;
+                        case "Decimal":
+                            textField_final.setText(convertirDecimal(textField_inicial.getText().toString()));
+                            break;
                     }
                 }
-
-
             }
+            
         });
         btn_convertir.setBounds(166, 176, 89, 23);
         frame.getContentPane().add(btn_convertir);
         
         JLabel lbl_a_convertir = new JLabel("A convertir:");
         lbl_a_convertir.setHorizontalAlignment(SwingConstants.RIGHT);
-        lbl_a_convertir.setBounds(64, 68, 111, 14);
+        lbl_a_convertir.setBounds(64, 99, 111, 14);
         frame.getContentPane().add(lbl_a_convertir);
     }
     
     public String convertirBinario(String entrada) {
-        // Convertimos la cadena a binario y la devolvemos como cadena
-        return Integer.toBinaryString(Integer.parseInt(entrada));
+        // Convertimos la cadena Hexadecimal a binario y la devolvemos como cadena
+        int Resultado;
+        // Comprobamos que el número introducido es hexadecimal
+        
+
+        return 
     }    
 
     public String convertirOctal(String entrada) {
-        // Convertimos la cadena a octal y la devolvemos como cadena
-        return Integer.toOctalString(Integer.parseInt(entrada));
+        // Convertimos la cadena a octal y la devolvemos como String
+        return 
     }
 
     public String convertirHexadecimal(String entrada) {
         // Convertimos la cadena a hexadecimal y la devolvemos como cadena
-        return Integer.toHexString(Integer.parseInt(entrada));
+        return 
     }
 
-    public boolean esNumero(String entrada) {
-        // Comprobamos si la cadena es un número
+    public String convertirDecimal(String entrada) {
+        // Convertimos la cadena a decimal y la devolvemos como cadena
+        return 
+    }
+
+    public boolean contieneLetra(String entrada) {
+        // Comprobamos si la cadena de texto contiene alguna letra
+        // Si contiene alguna letra, devolvemos true
+        // Si no contiene ninguna letra, devolvemos false
+
         try {
             Integer.parseInt(entrada);
-            return true;
-        } catch (NumberFormatException e) {
             return false;
+        } catch (NumberFormatException e) {
+            return true;
         }
+
     }
+
+
     
     
     
