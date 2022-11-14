@@ -118,42 +118,64 @@ public class Actividad6 {
         // Convertimos la cadena Hexadecimal a binario y la devolvemos como cadena
         int Resultado;
         // Comprobamos que el número introducido es hexadecimal
-        
-
-        return 
+        try {
+            Resultado = Integer.parseInt(entrada, 2);
+        } catch (NumberFormatException e) {
+            // Aqui se realiza la conversión en caso de que el número no sea hexadecimal
+            Resultado = Integer.parseInt(entrada, 16);
+        }
+        String resultado_Final = Integer.toBinaryString(Resultado);
+        return resultado_Final;
     }    
 
     public String convertirOctal(String entrada) {
         // Convertimos la cadena a octal y la devolvemos como String
-        return 
+        int Resultado;
+        // Comprobamos que el número introducido es hexadecimal
+        try {
+            Resultado = Integer.parseInt(entrada, 8);
+        } catch (NumberFormatException e) {
+            // Aqui se realiza la conversión en caso de que el número no sea hexadecimal
+            Resultado = Integer.parseInt(entrada, 16);
+        }
+        String resultado_Final = Integer.toOctalString(Resultado);
+        return resultado_Final;
     }
 
     public String convertirHexadecimal(String entrada) {
         // Convertimos la cadena a hexadecimal y la devolvemos como cadena
-        return 
+        int Resultado;
+        // Un if para comprobar de que tipo es el número introducido
+        if (entrada.matches("[0-1]")) {
+            // Aqui se realiza la conversión en caso de que el número sea binario
+            Resultado = Integer.parseInt(entrada, 2);
+        } else if (entrada.matches("[0-7]")) {
+            // Aqui se realiza la conversión en caso de que el número sea octal
+            Resultado = Integer.parseInt(entrada, 8);
+        } else if (entrada.matches("[0-9]")) {
+            // Aqui se realiza la conversión en caso de que el número sea decimal
+            Resultado = Integer.parseInt(entrada, 10);
+        } else {
+            // Aqui se realiza la conversión en caso de que el número no sea hexadecimal
+            Resultado = Integer.parseInt(entrada, 16);
+        }
+        String resultado_Final = Integer.toHexString(Resultado);
+        return resultado_Final;
     }
 
     public String convertirDecimal(String entrada) {
         // Convertimos la cadena a decimal y la devolvemos como cadena
-        return 
-    }
-
-    public boolean contieneLetra(String entrada) {
-        // Comprobamos si la cadena de texto contiene alguna letra
-        // Si contiene alguna letra, devolvemos true
-        // Si no contiene ninguna letra, devolvemos false
-
+        int Resultado;
+        // Comprobamos que el número introducido es hexadecimal
         try {
-            Integer.parseInt(entrada);
-            return false;
+            Resultado = Integer.parseInt(entrada, 10);
         } catch (NumberFormatException e) {
-            return true;
+            // Aqui se realiza la conversión en caso de que el número no sea hexadecimal
+            Resultado = Integer.parseInt(entrada, 16);
         }
-
-    }
-
-
-    
+        String resultado_Final = Integer.toString(Resultado);
+        return resultado_Final;
+    } 
     
     
     
