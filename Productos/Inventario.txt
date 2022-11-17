@@ -1,0 +1,155 @@
+----------------- Accesorios -----------------
+Id: 101
+Nombre: Cable
+Precio: 20.0
+Stock: 5
+Compatible con: 
+- 301 - iPad 2020
+-----------------
+Id: 102
+Nombre: Carcasa
+Precio: 15.0
+Stock: 5
+Compatible con: 
+- 301 - iPad 2020
+-----------------
+
+----------------- AirPods -----------------
+Id: 201
+Nombre: AirPods1
+Precio: 199.0
+Stock: 10
+Color: Blanco
+Compatible con: 
+- 401 - Iphone 5
+- 301 - iPad 2020
+- 501 - Mac1
+- 502 - Mac1 Pro
+-----------------
+Id: 202
+Nombre: AirPods1 Pro
+Precio: 299.0
+Stock: 5
+Color: Blanco
+Compatible con: 
+- 402 - Iphone 9
+- 302 - iPad 2021
+- 501 - Mac1
+- 502 - Mac1 Pro
+-----------------
+Id: 203
+Nombre: AirPods2
+Precio: 239.0
+Stock: 10
+Color: Blanco
+Compatible con: 
+- 401 - Iphone 5
+- 301 - iPad 2020
+- 501 - Mac1
+- 502 - Mac1 Pro
+-----------------
+Id: 204
+Nombre: AirPods2 Pro
+Precio: 339.0
+Stock: 5
+Color: Blanco
+Compatible con: 
+- 402 - Iphone 9
+- 302 - iPad 2021
+- 501 - Mac1
+- 502 - Mac1 Pro
+-----------------
+
+----------------- IWatch -----------------
+Id: 601
+Nombre: IWatch 2
+Precio: 150.0
+Stock: 5
+Color: Rojo
+Compatible con: 
+- 401 - Iphone 5
+- 402 - Iphone 9
+-----------------
+
+----------------- Iphone -----------------
+Id: 401
+Nombre: Iphone 5
+Precio: 450.0
+Stock: 10
+Procesador: M50
+Ram: 2
+Almacenamiento: 18
+Color: Rojo
+Accesorios: 
+- 201 - AirPods1
+- 203 - AirPods2
+- 101 - Cable
+- 102 - Carcasa
+-----------------
+Id: 402
+Nombre: Iphone 9
+Precio: 660.0
+Stock: 20
+Procesador: M10
+Ram: 6
+Almacenamiento: 128
+Color: Negro
+Accesorios: 
+- 202 - AirPods1 Pro
+- 204 - AirPods2 Pro
+- 101 - Cable
+- 102 - Carcasa
+-----------------
+Id: 403
+Nombre: Iphone X
+Precio: 999.0
+Stock: 2
+Procesador: M10
+Ram: 8
+Almacenamiento: 128
+Color: Rojo
+Accesorios: 
+- 201 - AirPods1
+- 203 - AirPods2
+- 101 - Cable
+- 102 - Carcasa
+-----------------
+
+----------------- IWatch -----------------
+Id: 602
+Nombre: IWatch 3
+Precio: 190.0
+Stock: 10
+Color: Blanco
+Compatible con: 
+- 402 - Iphone 9
+- 403 - Iphone X
+-----------------
+
+----------------- Mac -----------------
+Id: 501
+Nombre: Mac1
+Precio: 800.0
+Stock: 5
+Procesador: M4
+Ram: 12
+Almacenamiento: 256
+Accesorios: 
+- 201 - AirPods1
+- 203 - AirPods2
+- 101 - Cable
+- 102 - Carcasa
+-----------------
+Id: 502
+Nombre: Mac1 Pro
+Precio: 999.0
+Stock: 2
+Procesador: M2
+Ram: 24
+Almacenamiento: 500
+Accesorios: 
+- 201 - AirPods1
+- 203 - AirPods2
+- 101 - Cable
+- 102 - Carcasa
+-----------------

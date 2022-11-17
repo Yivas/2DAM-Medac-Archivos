@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Documents/Portatil medac/2DAM-Medac-Archivos/Interfaces/Eclipse/productosApple.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Documents/Portatil_Medac/2DAM-Medac-Archivos/Interfaces/Eclipse/productosApple.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
