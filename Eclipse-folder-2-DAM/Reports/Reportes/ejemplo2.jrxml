@@ -2,51 +2,6 @@
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ejemplo2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4770a965-9ae8-4dc6-b015-bee9cebfe3c1">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="prueba_csv22"/>
-	<subDataset name="Dataset1" uuid="172b1171-99a7-493c-8615-597d089980d3">
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="prueba_csv22"/>
-		<queryString language="csv">
-			<![CDATA[]]>
-		</queryString>
-		<field name="cod_tienda" class="java.lang.Integer"/>
-		<field name="id_ticket" class="java.lang.Integer"/>
-		<field name="id_articulo" class="java.lang.Integer"/>
-		<field name="precio" class="java.lang.Integer"/>
-		<group name="cod_tienda">
-			<groupExpression><![CDATA[$F{cod_tienda}]]></groupExpression>
-		</group>
-	</subDataset>
-	<subDataset name="Dataset2" uuid="39f20a0f-5c74-4cfa-8c1c-f96bacfbab00">
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="prueba_csv22"/>
-		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="421"/>
-		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="565"/>
-		<queryString language="csv">
-			<![CDATA[]]>
-		</queryString>
-		<field name="cod_tienda" class="java.lang.Integer"/>
-		<field name="precio" class="java.lang.Integer"/>
-		<sortField name="TotalTiendas" type="Variable"/>
-		<variable name="TotalTiendas" class="java.lang.String" calculation="Sum">
-			<variableExpression><![CDATA[$F{precio}]]></variableExpression>
-		</variable>
-		<group name="cod_tienda">
-			<groupExpression><![CDATA[$F{cod_tienda}]]></groupExpression>
-		</group>
-	</subDataset>
-	<subDataset name="Dataset3" uuid="cfe0a0e5-d0a1-465c-b63e-2e083fb635a3">
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="prueba_csv22"/>
-		<queryString language="csv">
-			<![CDATA[]]>
-		</queryString>
-		<field name="cod_tienda" class="java.lang.Integer"/>
-		<field name="precio" class="java.lang.Integer"/>
-		<sortField name="TotalTiendas" type="Variable"/>
-		<variable name="TotalTiendas" class="java.lang.String" calculation="Sum">
-			<variableExpression><![CDATA[$F{precio}]]></variableExpression>
-		</variable>
-		<group name="cod_tienda">
-			<groupExpression><![CDATA[$F{cod_tienda}]]></groupExpression>
-		</group>
-	</subDataset>
 	<queryString language="csv">
 		<![CDATA[]]>
 	</queryString>
@@ -54,9 +9,7 @@
 	<field name="id_ticket" class="java.lang.Integer"/>
 	<field name="id_articulo" class="java.lang.Integer"/>
 	<field name="precio" class="java.lang.Integer"/>
-	<variable name="TotalTiendas" class="java.lang.String" calculation="Sum">
-		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
-	</variable>
+	<sortField name="precio"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -67,57 +20,16 @@
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch"/>
+		<band height="74" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="51" splitType="Stretch">
-			<textField>
-				<reportElement x="40" y="10" width="100" height="30" uuid="b411efd1-6467-4abb-9c4d-6b76ba661b9b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="430" y="10" width="100" height="30" uuid="fdc92ab5-8fd4-4208-b884-e9c8d698b780"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[SUM($F{precio} )]]></textFieldExpression>
-			</textField>
-			<componentElement>
-				<reportElement x="160" y="10" width="243" height="30" uuid="55398991-1114-4d8a-b253-01ed001d1859"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="Dataset3" uuid="9ba13698-aabb-45e8-9b53-0167029404a8">
-						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-					</datasetRun>
-					<jr:listContents height="30" width="243">
-						<textField>
-							<reportElement x="0" y="0" width="120" height="30" uuid="fb2001ad-b3c6-4c34-87fa-7ecb7ccd3b8f"/>
-							<textFieldExpression><![CDATA[$F{cod_tienda}]]></textFieldExpression>
-						</textField>
-						<textField>
-							<reportElement x="120" y="0" width="123" height="30" uuid="c2475b15-3e37-43b2-bd55-69b2752d738f"/>
-							<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
-						</textField>
-					</jr:listContents>
-				</jr:list>
-			</componentElement>
-		</band>
+		<band height="70" splitType="Stretch"/>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="58" splitType="Stretch">
-			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="460" y="14" width="100" height="30" uuid="b772fc37-550c-4241-aa84-3c530f18df9c"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
-		</band>
+		<band height="58" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
 		<band height="42" splitType="Stretch"/>
