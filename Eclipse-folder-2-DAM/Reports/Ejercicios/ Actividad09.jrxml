@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name=" Actividad09" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="497fc9cd-233e-4ded-b1c4-14a561e5a25c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="2023_01_10 Actividad09 3"/>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="cod_tienda" class="java.lang.Integer"/>
+	<field name="id_ticket" class="java.lang.Integer"/>
+	<field name="id_articulo" class="java.lang.Integer"/>
+	<field name="precio" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<sortField name="PrecioTotal" order="Descending" type="Variable"/>
+	<variable name="PrecioTotal" class="java.lang.String" calculation="Sum">
+		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
+	</variable>
+	<group name="cod_tienda">
+		<groupExpression><![CDATA[$F{cod_tienda}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="4" width="290" height="70" uuid="7c31048d-f191-4bf7-9cbd-1d0316b3445a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Ejercicio 9]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="8" width="100" height="30" uuid="0ae2fd85-23d5-45dc-8e6f-46948d68fb80"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="10" width="100" height="30" uuid="6de99b08-940d-4b86-bf0c-0cfb2c056b3f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c510570c-a9a5-4d22-9d68-c59b942d685e"/>
+				</reportElement>
+				<text><![CDATA[cod_tienda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="10" width="100" height="30" uuid="65db7726-4ecb-400d-a1eb-0f91571aa972">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c0cdf479-6411-4527-bde3-2710af268d21"/>
+				</reportElement>
+				<text><![CDATA[precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="150" y="20" width="100" height="30" uuid="6e34588a-07b6-4a02-a780-69ff209ca259">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c510570c-a9a5-4d22-9d68-c59b942d685e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cod_tienda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="20" width="100" height="30" uuid="07b5ae17-08fc-4e4c-af03-680d76980ee7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c0cdf479-6411-4527-bde3-2710af268d21"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="370" y="10" width="100" height="30" uuid="2b2dbf0a-1526-46b3-a7e6-216096ef5cb1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="10" width="100" height="30" uuid="f10c62a9-ffe9-4906-bae2-e18470f21db1"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
