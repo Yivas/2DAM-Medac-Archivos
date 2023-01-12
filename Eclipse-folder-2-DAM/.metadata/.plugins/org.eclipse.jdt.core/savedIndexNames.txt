@@ -22,7 +22,6 @@ INDEX VERSION 1.131+C:\Users\Usuario\Documents\Portatil_Medac\2DAM-Medac-Archivo
 2146247475.index
 437976595.index
 3730209055.index
-2692308063.index
 1211557353.index
 1081455784.index
 2364324061.index
