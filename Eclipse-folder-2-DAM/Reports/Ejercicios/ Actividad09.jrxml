@@ -15,6 +15,10 @@
 	<variable name="PrecioTotal" class="java.lang.String" calculation="Sum">
 		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
 	</variable>
+	<variable name="Contador" class="java.lang.Integer" resetType="Group" resetGroup="cod_tienda" calculation="Count">
+		<variableExpression><![CDATA[$F{cod_tienda} != null ? 1 : 0]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
 	<group name="cod_tienda">
 		<groupExpression><![CDATA[$F{cod_tienda}]]></groupExpression>
 	</group>
@@ -22,7 +26,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="120" splitType="Stretch">
 			<staticText>
 				<reportElement x="132" y="4" width="290" height="70" uuid="7c31048d-f191-4bf7-9cbd-1d0316b3445a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -30,6 +34,10 @@
 				</textElement>
 				<text><![CDATA[Ejercicio 9]]></text>
 			</staticText>
+			<image>
+				<reportElement x="422" y="10" width="144" height="58" uuid="84927789-33af-430a-a170-1c6fb3fb64f4"/>
+				<imageExpression><![CDATA["https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -90,6 +98,33 @@
 		</band>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band height="184" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="42" y="0" width="470" height="170" uuid="0a4ccf59-726c-4189-910a-a568d510893c"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Report" incrementType="Group" incrementGroup="cod_tienda"/>
+					<categorySeries>
+						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{cod_tienda}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{Contador}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
 	</summary>
 </jasperReport>

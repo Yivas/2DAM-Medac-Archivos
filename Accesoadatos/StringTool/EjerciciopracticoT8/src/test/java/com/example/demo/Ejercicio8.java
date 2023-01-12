@@ -22,14 +22,14 @@ public class Ejercicio8 {
         // 
         
         Connection connection;
-        connection = DriverManager.getConnection(URL, usuario, password);
-        System.out.println("Conexión realizada correctamente");
+        //connection = DriverManager.getConnection(URL, usuario, password);
+        //System.out.println("Conexión realizada correctamente");
 
         String sql = "";
 
         
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(sql);
+        //Statement statement = connection.createStatement();
+        //ResultSet resultSet = statement.executeQuery(sql);
         
 
         
