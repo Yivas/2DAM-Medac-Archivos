@@ -8,12 +8,13 @@
 	<field name="cod_tienda" class="java.lang.Integer"/>
 	<field name="id_ticket" class="java.lang.Integer"/>
 	<field name="id_articulo" class="java.lang.Integer"/>
-	<field name="precio" class="java.lang.String"/>
+	<field name="precio" class="java.lang.Double"/>
 	<field name="provincia" class="java.lang.String"/>
 	<field name="fecha" class="java.lang.String"/>
 	<sortField name="cod_tienda"/>
-	<variable name="PrecioTotal" class="java.lang.String" calculation="Sum">
+	<variable name="PrecioTotal" class="java.lang.Double" resetType="Group" resetGroup="Group1" calculation="Sum">
 		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
 	</variable>
 	<variable name="Contador" class="java.lang.Integer" resetType="Group" resetGroup="cod_tienda" calculation="Count">
 		<variableExpression><![CDATA[$F{cod_tienda} != null ? 1 : 0]]></variableExpression>
@@ -25,44 +26,80 @@
 	<group name="Group1">
 		<groupExpression><![CDATA[$F{cod_tienda}]]></groupExpression>
 		<groupHeader>
-			<band height="50">
+			<band height="31">
 				<staticText>
-					<reportElement x="120" y="10" width="100" height="30" uuid="7cfb07f6-6e0a-4cf0-b3e9-40c03b85821e">
+					<reportElement mode="Opaque" x="140" y="0" width="100" height="30" backcolor="#EDEDED" uuid="7cfb07f6-6e0a-4cf0-b3e9-40c03b85821e">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6040b80e-9563-4ea2-8a3d-24d23506fca9"/>
 					</reportElement>
+					<box padding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
 					<text><![CDATA[cod_tienda]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="240" y="10" width="100" height="30" uuid="e191e248-1c4a-4c00-88dd-0724d5b9346d">
+					<reportElement mode="Opaque" x="240" y="0" width="100" height="30" backcolor="#EDEDED" uuid="e191e248-1c4a-4c00-88dd-0724d5b9346d">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="051e9313-e488-4ad8-bc08-597d98b35d17"/>
 					</reportElement>
+					<box padding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
 					<text><![CDATA[precio]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="360" y="10" width="100" height="30" uuid="6177d3f9-0cd9-4251-af70-50585a22b3c3">
+					<reportElement mode="Opaque" x="340" y="0" width="100" height="30" backcolor="#EDEDED" uuid="6177d3f9-0cd9-4251-af70-50585a22b3c3">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="051e9313-e488-4ad8-bc08-597d98b35d17"/>
 					</reportElement>
+					<box padding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
 					<text><![CDATA[Provincia]]></text>
 				</staticText>
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="50">
+			<band height="30">
 				<textField>
-					<reportElement x="120" y="10" width="100" height="30" uuid="180631b4-f451-4eba-bf9e-5f0a28b5a9a7">
+					<reportElement mode="Opaque" x="340" y="-1" width="100" height="30" backcolor="#B5B5B5" uuid="cdd9318e-0ac7-4f5c-8ca9-a00f87097cd6"/>
+					<box padding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="140" y="0" width="100" height="30" backcolor="#B5B5B5" uuid="180631b4-f451-4eba-bf9e-5f0a28b5a9a7">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6040b80e-9563-4ea2-8a3d-24d23506fca9"/>
 					</reportElement>
+					<box padding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
 					<textFieldExpression><![CDATA[$F{cod_tienda}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="240" y="10" width="100" height="30" uuid="bc3d31b1-6c5a-4df0-ae7f-693b5509e5a4">
+					<reportElement mode="Opaque" x="240" y="0" width="100" height="30" backcolor="#B5B5B5" uuid="bc3d31b1-6c5a-4df0-ae7f-693b5509e5a4">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="051e9313-e488-4ad8-bc08-597d98b35d17"/>
 					</reportElement>
-					<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="360" y="10" width="100" height="30" uuid="cdd9318e-0ac7-4f5c-8ca9-a00f87097cd6"/>
-					<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+					<box padding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textFieldExpression><![CDATA[$V{PrecioTotal}]]></textFieldExpression>
 				</textField>
 			</band>
 		</groupFooter>
@@ -86,7 +123,7 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="46" splitType="Stretch">
+		<band height="44" splitType="Stretch">
 			<textField pattern="MMMMM dd, yyyy">
 				<reportElement x="460" y="8" width="100" height="30" uuid="0ae2fd85-23d5-45dc-8e6f-46948d68fb80"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
@@ -111,17 +148,17 @@
 		<band height="184" splitType="Stretch">
 			<barChart>
 				<chart evaluationTime="Report">
-					<reportElement x="42" y="0" width="470" height="170" uuid="0a4ccf59-726c-4189-910a-a568d510893c"/>
+					<reportElement x="42" y="0" width="470" height="170" uuid="20db17e1-7705-49ac-9f06-d782372bea31"/>
 					<chartTitle/>
 					<chartSubtitle/>
 					<chartLegend/>
 				</chart>
 				<categoryDataset>
-					<dataset resetType="Report" incrementType="Group" incrementGroup="cod_tienda"/>
+					<dataset resetType="Report"/>
 					<categorySeries>
-						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
-						<categoryExpression><![CDATA[$F{cod_tienda}]]></categoryExpression>
-						<valueExpression><![CDATA[$V{Contador}]]></valueExpression>
+						<seriesExpression><![CDATA[$F{provincia}]]></seriesExpression>
+						<categoryExpression><![CDATA[MONTH($F{fecha})]]></categoryExpression>
+						<valueExpression><![CDATA[$V{PrecioTotal}]]></valueExpression>
 					</categorySeries>
 				</categoryDataset>
 				<barPlot>
