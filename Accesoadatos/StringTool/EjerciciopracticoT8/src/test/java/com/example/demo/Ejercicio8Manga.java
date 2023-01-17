@@ -6,7 +6,7 @@ import javax.persistence.*;
 // correspondan  a  cada  columna  de  la  tabla  (por  ejemplo,  "titulo",  "autor",  "genero", 
 // "anio_publicacion" y "numero_volumenes"). Utiliza anotaciones de Hibernate para mapear 
 // cada atributo a una columna de la tabla en la base de datos.
-
+/*
 @Entity
 @Table(name="biblioteca_manga")
 public class Ejercicio8Manga {
@@ -34,3 +34,5 @@ public class Ejercicio8Manga {
 	
 
 }
+
+*/

@@ -1,12 +1,18 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
+
 
 public class Metodos implements Ejercicio8Interfaz {
 
+	
+	private SessionFactory factory;
 	@Override
     public void createManga(Manga manga) {
         Transaction transaction = null;
@@ -34,8 +40,6 @@ public class Metodos implements Ejercicio8Interfaz {
 			transaction = session.beginTransaction();
 			// Guardo el objeto
 			manga = session.get(Manga.class, id);
-			// Realizo el commit
-			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -66,6 +70,7 @@ public class Metodos implements Ejercicio8Interfaz {
 
     }
 
+    
     @Override
     public void deleteManga(Manga manga) {
         Transaction transaction = null;
@@ -85,26 +90,37 @@ public class Metodos implements Ejercicio8Interfaz {
 
     }
 
+
 	@SuppressWarnings("unchecked")
 	@Override
-	public ArrayList<Manga> readAllManga() {
-		ArrayList <Manga> listaMangas = new ArrayList <Manga>();
-		Transaction transaction = null;
-		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			// Comienzo 
-			transaction = session.beginTransaction();
+	public List<Manga> readAllManga() {
+		List <Manga> listaMangas = null;
+			try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 			// Guardo el objeto
-			listaMangas = (ArrayList<Manga>) session.createQuery("from Manga").list();
-			// Realizo el commit
-			transaction.commit();
+			listaMangas = session.createQuery("From Manga").list();
 		} catch (Exception e) {
-			if (transaction != null) {
-				transaction.rollback();
-			}
 			e.printStackTrace();
 		}
 		return listaMangas;
 		
 	}
+
+
+	// Realiza sentencias SQL
+
+	public void sentenciaSQL(String sentencia) {
+		Transaction transaction = null;
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+			// Comienzo
+			transaction = session.beginTransaction();
+			// Elimino el objeto
+			session.createQuery(sentencia);
+			// Realizo el commit
+			transaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	
 }

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/*
 public class Ejercicio8 {
 	 
     // private static String jdbcUrl = "jdbc:h2:mem:test";
@@ -42,3 +42,4 @@ public class Ejercicio8 {
     
     
 }
+*/

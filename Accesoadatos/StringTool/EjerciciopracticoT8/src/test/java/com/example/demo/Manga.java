@@ -1,16 +1,41 @@
 package com.example.demo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
 // Crea una calse Java que defina operaciones para manipular los mangas en la base de 
 // datos, como crear, leer, actualizar y eliminar mangas. Utiliza Hibernate para implementar 
 // estas operaciones de manera eficiente y segura.
 
+@Entity
+@EnableAutoConfiguration
+@Table(name="Manga")
 public class Manga {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
     private int id;
+	
+	@Column(name="titulo")
     private String titulo;
+	
+	@Column(name="autor")
     private String autor;
+    
+	@Column(name="genero")
     private String genero;
+    
+	@Column(name="anio_publicacion")
     private int anio_publicacion;
+    
+	@Column(name="numero_volumenes")
     private int numero_volumenes;
 
     public Manga() {
