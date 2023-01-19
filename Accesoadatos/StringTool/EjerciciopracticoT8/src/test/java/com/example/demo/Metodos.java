@@ -122,5 +122,22 @@ public class Metodos implements Ejercicio8Interfaz {
 		}
 	}
 
+
+	// Vaciar una tabla
+
+	public void vaciarTabla(String tabla) {
+		Transaction transaction = null;
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+			// Comienzo
+			transaction = session.beginTransaction();
+			// Elimino el objeto
+			session.createQuery("DELETE FROM " + tabla);
+			// Realizo el commit
+			transaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	
 }

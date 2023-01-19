@@ -15,7 +15,15 @@ public class Consultas {
 		// Hacer una consulta para obtener la lista de todos los mangas publicados
 		// antes del año 2010, o para obtener el manga más reciente publicado
 		// por un determinado autor.
+
+		// Creamos un objeto de la clase Metodos
+		Metodos m1 = new Metodos();
 		
+		// Vaciamos la tabla usando el metodo vaciarTabla
+		m1.vaciarTabla("Manga");
+		
+		// Creamos una sentencia SQL para insertar los datos iniciales en la tabla
+
 		String sentencia = "INSERT  INTO  Manga  (titulo,  autor,  genero,  anio_publicacion,  numero_volumenes) \r\n"
 				+ "VALUES (\"One Piece\", \"Eiichiro Oda\", \"Aventura, comedia, fantasía\", 1997, 100), (\"Attack \r\n"
 				+ "on Titan\", \"Hajime Isayama\", \"Acción, drama, horror\", 2009, 34), (\"Demon Slayer: Kimetsu \r\n"
@@ -29,17 +37,25 @@ public class Consultas {
 				+ "Kamuy\", \"Satoru Noda\", \"Aventura, historia\", 2014, 29), (\"Manga Dogs\", \"John Gallagher\", \r\n"
 				+ "\"Comedia, aventura\", 2011, 4), (\"Black Clover\", \"Yūki Tabata\", \"Acción, fantasía\", 2015, 28)";
 
-		Metodos m1 = new Metodos();
+		// Ejecutamos la sentencia SQL
+
 		m1.sentenciaSQL(sentencia);
 
-		List <Manga> listaMangas = null;
-		listaMangas = m1.readAllManga();
-		System.out.println(listaMangas.toString());
+		// Creamos una lista de objetos Manga
+		ArrayList <Manga> listaMangas = new ArrayList<Manga>();
 		
+		// Creamos una lista de objetos manga en la cual introduciremos los datos de la consulta
+		// y comprobaremos cada manga y si su año de publicación es anterior a 2010 
+		// y su autor es Eiichiro Oda lo añadiremos a la lista
+		for (Manga manga : m1.readAllManga()) {
+			if (manga.getAnio_publicacion() < 2010 && manga.getAutor().equals("Eiichiro Oda")) {
+				listaMangas.add(manga);
+			}
+		}	
 		
+		// Imprimimos la lista de mangas
+		System.out.println(listaMangas);
 		
-
-
 
 
 	}
