@@ -82,8 +82,8 @@ public class Metodos implements Ejercicio9Interfaz {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List readAllManga() {
-		List listaMangas = null;
+	public List<Manga> readAllManga() {
+		List<Manga> listaMangas = new ArrayList<Manga>();
 		try {
 			// Comienzo 
 			em.getTransaction().begin();
