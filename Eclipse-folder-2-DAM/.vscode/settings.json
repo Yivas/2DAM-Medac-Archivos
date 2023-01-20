@@ -6,5 +6,6 @@
         "exclude": [
             "d:\\Documents\\Portatil medac\\2DAM-Medac-Archivos\\Interfaces\\Eclipse\\productosApple.jar"
         ]
-    }
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
 }
