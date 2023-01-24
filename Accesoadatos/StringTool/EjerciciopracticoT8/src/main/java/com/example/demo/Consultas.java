@@ -8,9 +8,9 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Consultas {
-		@Autowired
+	@Autowired
 
-		private SessionFactory factory;
+	private SessionFactory factory;
 	public static void main(String[] args) {
 		// Hacer una consulta para obtener la lista de todos los mangas publicados
 		// antes del año 2010, o para obtener el manga más reciente publicado
@@ -20,10 +20,11 @@ public class Consultas {
 		Metodos m1 = new Metodos();
 		
 		// Vaciamos la tabla usando el metodo vaciarTabla
+		// para asegurarnos de que la tabla esta vacia
 		m1.vaciarTabla("Manga");
 		
 		// Creamos una sentencia SQL para insertar los datos iniciales en la tabla
-
+		// para asegurarnos de que la tabla tiene los datos que necesitamos
 		String sentencia = "INSERT  INTO  Manga  (titulo,  autor,  genero,  anio_publicacion,  numero_volumenes) \r\n"
 				+ "VALUES (\"One Piece\", \"Eiichiro Oda\", \"Aventura, comedia, fantasía\", 1997, 100), (\"Attack \r\n"
 				+ "on Titan\", \"Hajime Isayama\", \"Acción, drama, horror\", 2009, 34), (\"Demon Slayer: Kimetsu \r\n"
@@ -38,10 +39,10 @@ public class Consultas {
 				+ "\"Comedia, aventura\", 2011, 4), (\"Black Clover\", \"Yūki Tabata\", \"Acción, fantasía\", 2015, 28)";
 
 		// Ejecutamos la sentencia SQL
-
 		m1.sentenciaSQL(sentencia);
 
 		// Creamos una lista de objetos Manga
+		// en la cual introduciremos los datos de la consulta
 		ArrayList <Manga> listaMangas = new ArrayList<Manga>();
 		
 		// Creamos una lista de objetos manga en la cual introduciremos los datos de la consulta
@@ -56,9 +57,9 @@ public class Consultas {
 		// Imprimimos la lista de mangas
 		System.out.println(listaMangas);
 
-		// Utiliza Hibernate para realizar transacciones sobre la base de datos. Por ejemplo, podrías 
-		// crear  una  transacción  que  permita  crear  un  nuevo  manga  y  actualizar  el  número  de 
-		// volúmenes de otro manga en una sola operación, garantizando que ambas operaciones 
+		// Utiliza Hibernate para realizar transacciones sobre la base de datos. Por ejemplo, podrías
+		// crear una transacción que permita crear un nuevo manga y actualizar el número de
+		// volúmenes de otro manga en una sola operación, garantizando que ambas operaciones
 		// se realizan correctamente o que se deshacen en caso de error.
 
 		// Creamos un objeto de un nuevo manga

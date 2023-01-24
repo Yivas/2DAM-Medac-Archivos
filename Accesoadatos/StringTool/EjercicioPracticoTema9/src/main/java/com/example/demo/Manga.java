@@ -9,38 +9,48 @@ import javax.persistence.Table;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
-// Crea una calse Java que defina operaciones para manipular los mangas en la base de 
+
+// Crea una clase Java que defina operaciones para manipular los mangas en la base de 
 // datos, como crear, leer, actualizar y eliminar mangas. Utiliza Hibernate para implementar 
 // estas operaciones de manera eficiente y segura.
 
 @Entity
 @EnableAutoConfiguration
-@Table(name="Manga")
+// Creo la tabla Manga asociada a la clase Manga
+@Table(name = "Manga")
 public class Manga {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
+    // Creo el atributo id asociado a la columna id de la tabla Manga
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
-	
-	@Column(name="titulo")
+
+    // Creo el atributo titulo asociado a la columna titulo de la tabla Manga
+    @Column(name = "titulo")
     private String titulo;
-	
-	@Column(name="autor")
+
+    // Creo el atributo autor asociado a la columna autor de la tabla Manga
+    @Column(name = "autor")
     private String autor;
-    
-	@Column(name="genero")
+
+    // Creo el atributo genero asociado a la columna genero de la tabla Manga
+    @Column(name = "genero")
     private String genero;
-    
-	@Column(name="anio_publicacion")
+
+    // Creo el atributo anio_publicacion asociado a la columna anio_publicacion de la tabla Manga
+    @Column(name = "anio_publicacion")
     private int anio_publicacion;
-    
-	@Column(name="numero_volumenes")
+
+    // Creo el atributo numero_volumenes asociado a la columna numero_volumenes de la tabla Manga
+    @Column(name = "numero_volumenes")
     private int numero_volumenes;
 
+    // Creo un constructor vacio
     public Manga() {
     }
 
+    // Creo un constructor con todos los atributos menos el id
     public Manga(String titulo, String autor, String genero, int anio_publicacion, int numero_volumenes) {
         this.titulo = titulo;
         this.autor = autor;
@@ -49,6 +59,7 @@ public class Manga {
         this.numero_volumenes = numero_volumenes;
     }
 
+    // Creo un constructor con todos los atributos
     public Manga(int id, String titulo, String autor, String genero, int anio_publicacion, int numero_volumenes) {
         this.id = id;
         this.titulo = titulo;
@@ -58,6 +69,7 @@ public class Manga {
         this.numero_volumenes = numero_volumenes;
     }
 
+    // Creo los getters y setters de todos los atributos
     public int getId() {
         return id;
     }
@@ -106,10 +118,11 @@ public class Manga {
         this.numero_volumenes = numero_volumenes;
     }
 
+    // Creo el metodo toString
     @Override
     public String toString() {
-        return "Manga{" + "id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", genero=" + genero + ", anio_publicacion=" + anio_publicacion + ", numero_volumenes=" + numero_volumenes + '}';
+        return "Manga{" + "id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", genero=" + genero
+                + ", anio_publicacion=" + anio_publicacion + ", numero_volumenes=" + numero_volumenes + '}';
     }
-
 
 }

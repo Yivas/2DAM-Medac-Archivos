@@ -6,23 +6,25 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+// Clase para crear la sesion de hibernate
 public class HibernateUtil {
     private static StandardServiceRegistry registry;
     private static SessionFactory sessionFactory;
 
+    // Metodo para crear la sesion
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
-                // Create registry
+                // Creo el registro de la sesion
                 registry = new StandardServiceRegistryBuilder().configure().build();
 
-                // Create MetadataSources
+                // Creo los metadatos
                 MetadataSources sources = new MetadataSources(registry);
 
-                // Create Metadata
+                // Creo los metadatos
                 Metadata metadata = sources.getMetadataBuilder().build();
 
-                // Create SessionFactory
+                // Creo la sesion
                 sessionFactory = metadata.getSessionFactoryBuilder().build();
 
             } catch (Exception e) {

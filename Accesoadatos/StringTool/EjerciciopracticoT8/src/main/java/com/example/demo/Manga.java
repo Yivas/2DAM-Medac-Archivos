@@ -15,32 +15,46 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 @Entity
 @EnableAutoConfiguration
-@Table(name="Manga")
+// Mapeo de la clase Manga a la tabla Manga de la base de datos
+@Table(name = "Manga")
 public class Manga {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id")
+    // Atributos de la clase Manga (id, titulo, autor, genero, anio_publicacion,
+    // numero_volumenes)
+    // Los atributos de la clase Manga se mapean a columnas de la tabla Manga de la
+    // base de datos
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    // Atributo id de la clase Manga
+    @Column(name = "id")
     private int id;
-	
-	@Column(name="titulo")
+
+    // Atributo titulo de la clase Manga
+    @Column(name = "titulo")
     private String titulo;
-	
-	@Column(name="autor")
+
+    // Atributo autor de la clase Manga
+    @Column(name = "autor")
     private String autor;
-    
-	@Column(name="genero")
+
+    // Atributo genero de la clase Manga
+    @Column(name = "genero")
     private String genero;
-    
-	@Column(name="anio_publicacion")
+
+    // Atributo anio_publicacion de la clase Manga
+    @Column(name = "anio_publicacion")
     private int anio_publicacion;
-    
-	@Column(name="numero_volumenes")
+
+    // Atributo numero_volumenes de la clase Manga
+    @Column(name = "numero_volumenes")
     private int numero_volumenes;
 
+    // Constructor por defecto de la clase Manga
     public Manga() {
     }
 
+    // Constructor de la clase Manga que no incluye el atributo id
     public Manga(String titulo, String autor, String genero, int anio_publicacion, int numero_volumenes) {
         this.titulo = titulo;
         this.autor = autor;
@@ -49,6 +63,7 @@ public class Manga {
         this.numero_volumenes = numero_volumenes;
     }
 
+    // Constructor de la clase Manga que incluye todos los atributos
     public Manga(int id, String titulo, String autor, String genero, int anio_publicacion, int numero_volumenes) {
         this.id = id;
         this.titulo = titulo;
@@ -58,6 +73,7 @@ public class Manga {
         this.numero_volumenes = numero_volumenes;
     }
 
+    // Getters y setters de los atributos de la clase Manga
     public int getId() {
         return id;
     }
@@ -106,10 +122,11 @@ public class Manga {
         this.numero_volumenes = numero_volumenes;
     }
 
+    // Método toString de la clase Manga
     @Override
     public String toString() {
-        return "Manga{" + "id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", genero=" + genero + ", anio_publicacion=" + anio_publicacion + ", numero_volumenes=" + numero_volumenes + '}';
+        return "Manga{" + "id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", genero=" + genero
+                + ", anio_publicacion=" + anio_publicacion + ", numero_volumenes=" + numero_volumenes + '}';
     }
-
 
 }

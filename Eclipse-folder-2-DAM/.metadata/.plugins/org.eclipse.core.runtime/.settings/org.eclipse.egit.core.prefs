@@ -1,3 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\Documents\\Portatil medac\\2DAM-Medac-Archivos\\.git;
-GitRepositoriesView.GitDirectories.relative=D\:\\Documents\\Portatil medac\\2DAM-Medac-Archivos\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\Usuario\\Documents\\Portatil_Medac\\2DAM-Medac-Archivos\\.git;D\:\\Documents\\Portatil medac\\2DAM-Medac-Archivos\\.git;
+GitRepositoriesView.GitDirectories.relative=C\:\\Users\\Usuario\\Documents\\Portatil_Medac\\2DAM-Medac-Archivos\\.git;D\:\\Documents\\Portatil medac\\2DAM-Medac-Archivos\\.git;
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

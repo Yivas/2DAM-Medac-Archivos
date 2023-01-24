@@ -10,11 +10,13 @@ import java.util.List;
 public interface Ejercicio8Interfaz {
 
     public void createManga(Manga manga);
+
     public Manga readManga(int id);
+
     public List<Manga> readAllManga();
+
     public void updateManga(Manga manga);
+
     public void deleteManga(Manga manga);
-
-
 
 }

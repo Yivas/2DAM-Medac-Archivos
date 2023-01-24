@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+// Comentamos el siguiente codigo para poder usar Hibernate en vez de H2 como
+// se realizo en anteriores ejercicios
 /*
 public class Ejercicio8 {
 	 

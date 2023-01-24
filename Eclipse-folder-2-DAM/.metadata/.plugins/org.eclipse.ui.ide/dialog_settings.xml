@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Usuario\Documents\Portatil_Medac\2DAM-Medac-Archivos\Eclipse-folder-2-DAM"/>
 			<item value="D:\Documents\Portatil medac\2DAM-Medac-Archivos\Eclipse-folder-2-DAM"/>
 		</list>
 	</section>
