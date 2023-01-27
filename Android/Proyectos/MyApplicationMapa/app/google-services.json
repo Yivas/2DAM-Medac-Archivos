@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "576811567343",
+    "project_id": "delta-vial-376008",
+    "storage_bucket": "delta-vial-376008.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576811567343:android:933ae9a1c84d2c6f5e331a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576811567343-sj63f1np2m2a8m7gu071hahf8tps8s2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0USMGBQlVVau8rMIEocDYKv66uHFgGkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576811567343-sj63f1np2m2a8m7gu071hahf8tps8s2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
