@@ -24,6 +24,7 @@ def contar_ocurrencias(cadena, lista):
         diccionario[palabra] = cadena.count(palabra)
     return diccionario
 
+
 def contar_ocurrencias_archivo(nombre_archivo, lista):
     if os.path.exists(nombre_archivo):
         with open(nombre_archivo, 'r') as archivo:
@@ -31,5 +32,5 @@ def contar_ocurrencias_archivo(nombre_archivo, lista):
     else:
         print("El archivo no existe")
 
-resultado = contar_ocurrencias_archivo("texto.txt", ["hola", "mundo", "texto"])
+resultado = contar_ocurrencias_archivo("texto.txt", ["hola", "mundo", "t"])
 print(resultado)
