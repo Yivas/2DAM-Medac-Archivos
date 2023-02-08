@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/T12EjercicioWeb/ClaseServicios?wsdl" uri="src/conf/xml-resources/web-services/ClaseServiciosServiceFromWSDL/wsdl/localhost_8080/T12EjercicioWeb/ClaseServicios.wsdl"/>
+    <system systemId="http://localhost:8080/T12EjercicioWeb/ClaseServicios?xsd=1" uri="src/conf/xml-resources/web-services/ClaseServiciosServiceFromWSDL/wsdl/localhost_8080/T12EjercicioWeb/ClaseServicios.xsd_1.xsd"/>
+</catalog>
